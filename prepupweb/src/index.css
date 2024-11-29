@@ -58,6 +58,104 @@ button:focus-visible {
   outline: 4px auto -webkit-focus-ring-color;
 }
 
+.member-card {
+  display: flex;
+  flex-direction: row;
+  justify-content: left;
+  align-items: center;
+  position: relative;
+}
+
+.card-detail {
+  background-color: #1a1a1a;
+  text-align: left;
+  border-radius: 34px;
+
+  display: flex;
+  padding: 1rem;
+  padding-left: 14rem;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  /* gap: 14px; */
+  flex: 1 0 0;
+
+  /* display: flex; */
+  width: 90%;
+  /* align-items: left; */
+  gap: 14px;
+  position: absolute;
+  left: 4rem;
+}
+
+.card-profile {
+  position: relative;
+  z-index: 1;
+}
+
+.social-link {
+  display: flex;
+  gap: 0.124rem;
+}
+
+.body-link {
+  display: grid;
+  gap: 0.5rem;
+}
+
+/* TYPOGRAPHY */
+
+h4 {
+  &.header-title-h4 {
+    color: var(--PrepUp-Color-Palette-Default-App-Colors-Still-Black, #1b1b1b);
+    /* Heading 1 (Bold) */
+    font-family: "Maven Pro";
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 150%; /* 48px */
+    letter-spacing: -0.64px;
+  }
+}
+
+p {
+  &.body-text-p1 {
+    color: var(--PrepUp-Color-Palette-Default-App-Colors-Still-Black, #1b1b1b);
+    /* Heading 2 (Medium) */
+    font-family: "Maven Pro";
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+  }
+
+  &.body-text-p2 {
+    color: var(--PrepUp-Color-Palette-Default-App-Colors-Still-Black, #1b1b1b);
+    /* Body Text (Regular) */
+    font-family: Muli;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+  }
+
+  &.body-link {
+    color: var(--PrepUp-Color-Palette-Default-App-Colors-Still-Black, #1b1b1b);
+    /* Body Text (Regular) */
+    font-family: Muli;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 200;
+    line-height: normal;
+  }
+}
+
+/* CARD COLOR */
+
+.card-light-yellow {
+  background: var(--PrepUp-Color-Palette-Yappy-Yellow-Default, #f7c42b);
+}
+
 @media (prefers-color-scheme: light) {
   :root {
     color: #213547;

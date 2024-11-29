@@ -129,75 +129,26 @@ function App() {
         <section>
           <h2 className='py-10'>Development Team</h2>
 
-          <div className="w-70 flex">
-            <div>
-              <img src='https://placehold.co/264' className="" alt="Full Name" />
-              <div>
-                <h4>Shunsaku Sugita</h4>
-                <p>Lead Full-Stack Developer</p>
-                <p>5 years experience as a backend engineer and 2 years experience as a salesperson in the tech industry. I contribute to the project with product development and team management.</p>
-                <p className="flex">
-                  <a href="/" target="_blank">
-                    <img src='https://placehold.co/24' className="" alt="LinkedIn" />
+          <div className="w-70 grid grid-cols-2 grid-flow-col gap-5">
+            <div className="member-card">
+              <img src='https://placehold.co/264' className="card-profile" alt="Full Name" />
+              <div className="card-detail card-light-yellow">
+                <h4 className="header-title-h4">Shunsaku Sugita</h4>
+                <p className="body-text-p1">Lead Full-Stack Developer</p>
+                <p className="body-text-p2">5 years experience as a backend engineer and 2 years experience as a salesperson in the tech industry. I contribute to the project with product development and team management.</p>
+                <p className="body-link">
+                  <a className="social-link" href="/" target="_blank">
+                    <span><img src='https://placehold.co/24' className="" alt="LinkedIn" /></span>&nbsp;
+                    <span className="body-text-p2">Link</span>
                   </a>
-
-                  <a href="/" target="_blank">
-                    <img src='https://placehold.co/24' className="" alt="GITHUB" />
-                  </a>
-                </p>
-              </div>
-            </div>
-            <div>
-              <img src='https://placehold.co/264' className="" alt="Full Name" />
-              <div>
-                <h4>Shunsaku Sugita</h4>
-                <p>Lead Full-Stack Developer</p>
-                <p>5 years experience as a backend engineer and 2 years experience as a salesperson in the tech industry. I contribute to the project with product development and team management.</p>
-                <p className="flex">
-                  <a href="/" target="_blank">
-                    <img src='https://placehold.co/24' className="" alt="LinkedIn" />
-                  </a>
-
-                  <a href="/" target="_blank">
-                    <img src='https://placehold.co/24' className="" alt="GITHUB" />
+                  <a className="social-link" href="/" target="_blank">
+                    <span><img src='https://placehold.co/24' className="" alt="GITHUB" /></span>&nbsp;
+                    <span className="body-text-p2">Link</span>
                   </a>
                 </p>
               </div>
             </div>
-            <div>
-              <img src='https://placehold.co/264' className="" alt="Full Name" />
-              <div>
-                <h4>Shunsaku Sugita</h4>
-                <p>Lead Full-Stack Developer</p>
-                <p>5 years experience as a backend engineer and 2 years experience as a salesperson in the tech industry. I contribute to the project with product development and team management.</p>
-                <p className="flex">
-                  <a href="/" target="_blank">
-                    <img src='https://placehold.co/24' className="" alt="LinkedIn" />
-                  </a>
-
-                  <a href="/" target="_blank">
-                    <img src='https://placehold.co/24' className="" alt="GITHUB" />
-                  </a>
-                </p>
-              </div>
-            </div>
-            <div>
-              <img src='https://placehold.co/264' className="" alt="Full Name" />
-              <div>
-                <h4>Shunsaku Sugita</h4>
-                <p>Lead Full-Stack Developer</p>
-                <p>5 years experience as a backend engineer and 2 years experience as a salesperson in the tech industry. I contribute to the project with product development and team management.</p>
-                <p className="flex">
-                  <a href="/" target="_blank">
-                    <img src='https://placehold.co/24' className="" alt="LinkedIn" />
-                  </a>
-
-                  <a href="/" target="_blank">
-                    <img src='https://placehold.co/24' className="" alt="GITHUB" />
-                  </a>
-                </p>
-              </div>
-            </div>
+            
           </div>
           
 
