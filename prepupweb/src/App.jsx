@@ -62,7 +62,7 @@ function App() {
 
       {/* Header */}
       <header className='width-full flex flex-nowrap justify-between'>
-        <div className='w-1/3 justify-start'>
+        <div className='w-full justify-start lg:w-1/3'>
           <a href="/" target="_blank">
             <img src="./images/PrepUpLogo.svg" className="logo flex-auto" alt="PrepUp logo" />
           </a>
@@ -87,14 +87,16 @@ function App() {
         <section className='hero-container py-14'>
           <div className='py-2.5 intro'>
             <h2>Practice interviews anywhere, on the go!</h2>
-            <p className='body-text-sub'>Interviews may be daunting, but you&#39;ll never have to practice them alone. <br />PrepUp is your inteview companion on-the-go!</p>
+            <p className='body-text-sub'>Interviews may be daunting, but you&#39;ll never have to practice them alone.</p> 
+            <p className='body-text-sub'>PrepUp is your inteview companion on-the-go!</p>
           </div>
           
-          <div className='w-full flex justify-center mt-15'>
-            <img src="./images/phone.png"  className="w-1/3 flex-none" alt="React logo" />
-            <div className='self-start'>
+          <div className='w-full flex flex-wrap xl:flex-nowrap justify-center mt-15 relative right-10'>
+            <img src="./images/phone.png"  className="w-50 lg:w-1/3 flex-none relative right-21" alt="React logo" />
+            <div className='self-start relative top-5'>
               <h4 className='header-title-h4 pb-2'>Learn about PrepUp</h4>
-              <img src="https://placehold.co/600x400" alt="" />
+              {/* <img src="https://placehold.co/600x400" alt="" /> */}
+              <iframe width="620" height="420" src="https://www.youtube.com/embed/jsgmtHCwTFI?si=0ZZW2MtL8mxCJX00" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
             </div>
             
           </div>
@@ -106,29 +108,29 @@ function App() {
         {/* FEATURES SECTION */}
           
         <FadeInSection>
-        <section className='px-24 py-14' id="features">
-          <div className='flex justify-between'>
-            <div className='self-center w-1/2 text-left'>
+        <section className='lg:px-24 py-14' id="features">
+          <div className='grid grid-rows-2 grid-flow-col gap-4 lg:flex justify-between'>
+            <div className='self-center w-full lg:w-1/2 text-left'>
               <h3 className='header-title-h3'>Interview Simulator</h3>
-              <p className='body-text-sub'>Easily practice anywhere with AI-generated quick.</p>
+              <p className='body-text-sub grid-row-start-1 lg:grid-row-2'>Easily practice anywhere with AI-generated quick.</p>
             </div>
-            <img src="./images/InterviewSimulator.svg" className="w-1/3" alt="Man holding the phone" />
+            <img src="./images/InterviewSimulator.svg" className="w-full lg:w-1/3" alt="Man holding the phone" />
           </div>
 
-          <div className='flex justify-between'>
+          <div className='grid grid-rows-2 grid-flow-col gap-4 lg:flex justify-between'>
             <img src="./images/JobFinder.svg" className="w-60" alt="Magnifying glass to find job" />
-            <div className='self-center w-1/2 text-left'>
+            <div className='w-full col-start-1 self-center lg:w-1/2 lg:row-start-2 text-left'>
               <h3 className='header-title-h3'>Job Finder</h3>
               <p className='body-text-sub'>Quickly browse through lists of tailored job roles based on your past or current occupation.</p>
             </div>
           </div>
 
-          <div className='flex justify-between'>
-            <div className='self-center w-1/2 text-left'>
+          <div className='grid grid-rows-2 grid-flow-col gap-4 lg:flex justify-between'>
+            <div className='w-full self-center lg:w-1/2 text-left'>
               <h3 className='header-title-h3'>S.T.A.R Master</h3>
               <p className='body-text-sub'>Want to test answering situational tasks? Take the Situation/Task/Action/Result (S.T.A.R.) Master!</p>
             </div>
-            <img src="./images/STARMaster.svg" className="w-1/3" alt="Star in a bubble" />
+            <img src="./images/STARMaster.svg" className="w-full  lg:w-1/3" alt="Star in a bubble" />
           </div>
           
         </section>
@@ -138,19 +140,21 @@ function App() {
 
         <FadeInSection>
         <section className='py-10' id="team">
-          <h2>Meet our Team</h2>
+          <h2>Meet Our Team</h2>
           <p className='py-10 body-text-sub'>Highly professional and capable  of running your business across all digital channels</p>
 
           <div className='flex justify-center'>
-            <img src='./images/bts/PUBTS-01.jpg' className="w-80" alt="React logo" />
-            <img src='./images/bts/PUBTS-02.jpg' className="w-80" alt="React logo" />
-            <img src='./images/bts/PUBTS-03.jpg' className="w-80" alt="React logo" />
-            <img src='./images/bts/PUBTS-04.jpg' className="w-80" alt="React logo" />
-            <img src='./images/bts/PUBTS-05.jpg' className="w-80" alt="React logo" />
-            <img src='./images/bts/PUBTS-06.jpg' className="w-80" alt="React logo" />
-            <img src='./images/bts/PUBTS-07.jpg' className="w-80" alt="React logo" />
-            <img src='./images/bts/PUBTS-09.jpg' className="w-80" alt="React logo" />
-            <img src='./images/bts/PUBTS-11.jpg' className="w-80" alt="React logo" />
+            
+              <img src='./images/bts/PUBTS-01.jpg' className="w-80" alt="React logo" />
+              <img src='./images/bts/PUBTS-02.jpg' className="w-80" alt="React logo" />
+              <img src='./images/bts/PUBTS-03.jpg' className="w-80" alt="React logo" />
+              <img src='./images/bts/PUBTS-04.jpg' className="w-80" alt="React logo" />
+              <img src='./images/bts/PUBTS-05.jpg' className="w-80" alt="React logo" />
+              <img src='./images/bts/PUBTS-06.jpg' className="w-80" alt="React logo" />
+              <img src='./images/bts/PUBTS-07.jpg' className="w-80" alt="React logo" />
+              <img src='./images/bts/PUBTS-09.jpg' className="w-80" alt="React logo" />
+              <img src='./images/bts/PUBTS-11.jpg' className="w-80" alt="React logo" />
+            
           </div>
 
         </section>
@@ -172,7 +176,7 @@ function App() {
       </main>
 
       {/* Footer */}
-      <footer className='mt-24 mb-15 grid grid-col-1 grid-flow-col gap-4 align-center'>
+      <footer className='grid rid-row-1 grid-flow-row align-center lg:mt-24 lg:mb-15 lg:grid lg:grid-col-1 lg:grid-flow-col lg:gap-4 lg:align-center'>
         <div>
           <img src="./images/PrepUpLogo.svg" className="logo flex-auto" alt="PrepUp logo" />
           <p className="body-text-copy">&copy; 2024 PrepUp. All rights reserved.</p>
@@ -187,9 +191,7 @@ function App() {
 
           <div>
             <span className='downloadBtn'>
-              <a href="" download>Download Proposal</a>
-              
-              </span>
+              <a href="" download>Download</a></span>
             {/* <a href="/" className=''>Download Proposal</a> */}
           </div>
         </div>
