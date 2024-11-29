@@ -41,15 +41,15 @@ const Devcard = () => {
    
     return (
         
-        <div className="w-70 grid grid-rows-2 grid-flow-col gap-5">
+        <div className="w-70 grid grid-rows-2 grid-flow-col gap-24">
         {
-            devItems.map(({ cardPhoto, cardName, cardJob, cardRoleDetails, cardColor, linkedIn, github }, key) => (
+            devItems.map(({ cardPhoto, cardName, cardJob, cardColor, linkedIn, github }, key) => (
                 <div className="member-card" key={key}>
                     <img src={cardPhoto} className="card-profile" alt={cardName} />
                     <div className={'card-detail ' + cardColor}>
                         <h4 className="header-title-h4">{cardName}</h4>
                         <p className="body-text-p1">{cardJob}</p>
-                        <p className="body-text-p2">{cardRoleDetails}</p>
+                        {/* <p className="body-text-p2">{cardRoleDetails}</p> */}
                         <p className="body-link">
                             <a className="social-link" href={"https://www.linkedin.com/in/" + linkedIn} target="_blank">
                                 <span>

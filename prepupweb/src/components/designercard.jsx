@@ -1,32 +1,37 @@
-const Designercard = () => {
+// import luisLogo from '/images/logo/luis.svg'
 
+const Designercard = () => {
+    
     const desItems = [
         {
             cardPhoto: 'https://placehold.co/264',
             cardName: 'Luis Baptista',
-            cardJob: 'Product Mngr & UI/UX Designer',
-            cardRoleDetails: 'I have over 10 years experience as Web Developer. I specialize in delivering both technical and design solutions. My responsibility is to collaborate with two cross-functional team while fulfilling the UI/UX designer role.',
+            cardJob: 'PM & UI/UX Designer',
+            cardRoleDetails: 'I have over 10 years experience as Full Stack Developer. I specialize in delivering both technical and design solutions.',
             cardColor: 'card-light-yellow',
             linkedIn: "luiscbaptistajr",
             portfolio:'https://luiscbaptistajr.com',
+            logo: '/images/logo/luis.svg'
         },
         {
             cardPhoto: 'https://placehold.co/264',
             cardName: 'Darshjot Sohi',
             cardJob: 'UI/UX Designer',
-            cardRoleDetails: 'I have a background in graphic designing where I freelanced making illustrations. Now I’m working as a UI/UX designer for both web and mobile. I am still a beginner but I am willing to learn and improve.',
+            cardRoleDetails: 'I have a background in graphic designing where I freelanced making illustrations.',
             cardColor: 'card-pink',
             linkedIn: "darshjotkaursohi",
             portfolio:'https://darshjotsohi.com',
+            logo: './images/logo/darsh.svg'
         },
         {
             cardPhoto: 'https://placehold.co/264',
             cardName: 'Kyril Evangelista',
             cardJob: 'Lead UI/UX Designer',
-            cardRoleDetails: '3 years of experience as a Social Media Graphic Designer. My responsibilities are to co-produce and co-lead the PrepUp design team to create the branding/UI/UX of a market-ready app.',
+            cardRoleDetails: '3 years of experience as a Social Media Graphic Designer.',
             cardColor: 'card-dark-yellow',
             linkedIn: "kyrilevangelista",
             portfolio:'https://kyrillouis.online',
+            logo: "./images/logo/kyril.svg"
         },
         {
             cardPhoto: 'https://placehold.co/264',
@@ -36,20 +41,21 @@ const Designercard = () => {
             cardColor: 'card-nude',
             linkedIn: "daniellefpcarvalho",
             portfolio:'https://daniellecarvalho.ca/',
+            logo: "./images/logo/dani.svg"
         }
     ];
    
     return (
         
-        <div className="w-70 grid grid-rows-2 grid-flow-col gap-5">
+        <div className="w-70 grid grid-rows-2 grid-flow-col gap-24">
         {
-            desItems.map(({ cardPhoto, cardName, cardJob, cardRoleDetails, cardColor, linkedIn, portfolio }, key) => (
+            desItems.map(({ cardPhoto, cardName, cardJob, cardColor, linkedIn, portfolio, logo }, key) => (
                 <div className="member-card" key={key}>
                     <img src={cardPhoto} className="card-profile" alt={cardName} />
                     <div className={'card-detail ' + cardColor}>
                         <h4 className="header-title-h4">{cardName}</h4>
                         <p className="body-text-p1">{cardJob}</p>
-                        <p className="body-text-p2">{cardRoleDetails}</p>
+                        {/* <p className="body-text-p2">{cardRoleDetails}</p> */}
                         <p className="body-link">
                             <a className="social-link" href={"https://www.linkedin.com/in/" + linkedIn} target="_blank">
                                 <span>
@@ -63,11 +69,7 @@ const Designercard = () => {
                                 <span className="body-text-p2">{linkedIn}</span>
                             </a>
                             <a className="social-link" href={portfolio} target="_blank">
-                                <span>
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 25 25" fill="none">
-                                    <path d="M10.3643 21.0215C10.3642 20.8748 10.332 20.73 10.2697 20.5972C10.2075 20.4644 10.1168 20.3469 10.0041 20.2531C9.89137 20.1592 9.75941 20.0913 9.61753 20.0542C9.47566 20.017 9.32735 20.0115 9.18312 20.0381C7.87404 20.2783 6.22121 20.3145 5.78175 19.0801C5.39855 18.1241 4.76382 17.2896 3.94484 16.6651C3.8864 16.6333 3.83071 16.5967 3.77834 16.5557C3.70666 16.3666 3.57935 16.2037 3.4132 16.0885C3.24705 15.9733 3.04987 15.9111 2.84767 15.9102H2.84279C2.57839 15.9101 2.32472 16.0148 2.1373 16.2013C1.94988 16.3878 1.84399 16.6409 1.84279 16.9053C1.83888 17.7208 2.65379 18.2432 2.98439 18.42C3.37423 18.8117 3.68754 19.2727 3.90822 19.7793C4.27248 20.8028 5.33107 22.3555 8.37404 22.1553C8.37504 22.1905 8.37599 22.2237 8.37648 22.254L8.38087 22.5216C8.38087 22.7868 8.48622 23.0411 8.67376 23.2287C8.8613 23.4162 9.11565 23.5216 9.38087 23.5216C9.64608 23.5216 9.90044 23.4162 10.088 23.2287C10.2755 23.0411 10.3809 22.7868 10.3809 22.5216L10.376 22.2032C10.3711 22.0137 10.3643 21.7393 10.3643 21.0215ZM21.0313 5.89549C21.063 5.77049 21.0943 5.63182 21.1216 5.47557C21.2833 4.36116 21.1423 3.22376 20.7134 2.18257C20.6593 2.04684 20.5761 1.92458 20.4698 1.82438C20.3634 1.72417 20.2364 1.64844 20.0977 1.6025C19.7417 1.48238 18.4273 1.24605 15.9136 2.8525C13.8241 2.3608 11.6491 2.3608 9.5596 2.8525C7.05617 1.26958 5.74855 1.48438 5.39601 1.59766C5.25387 1.64174 5.1234 1.71707 5.01416 1.81812C4.90491 1.91917 4.81966 2.04339 4.76466 2.18166C4.32696 3.24284 4.1875 4.40344 4.36134 5.5381C4.38576 5.66603 4.41212 5.7842 4.43947 5.89259C3.61104 6.99603 3.16978 8.34196 3.1841 9.72169C3.1814 10.0295 3.19558 10.3373 3.22658 10.6436C3.56058 15.2461 6.56058 16.6279 8.65089 17.1026C8.60744 17.2276 8.56789 17.3613 8.53273 17.503C8.47007 17.7602 8.512 18.0319 8.64933 18.2583C8.78665 18.4847 9.00817 18.6475 9.2653 18.7108C9.52243 18.7742 9.79418 18.733 10.021 18.5962C10.2478 18.4595 10.4111 18.2384 10.4751 17.9815C10.5387 17.6483 10.7018 17.3422 10.9429 17.1035C11.0886 16.9759 11.1942 16.8087 11.2466 16.6222C11.2991 16.4357 11.2963 16.238 11.2384 16.0531C11.1806 15.8683 11.0703 15.7042 10.9209 15.5808C10.7715 15.4575 10.5895 15.3802 10.397 15.3584C6.94289 14.9639 5.44337 13.5567 5.21779 10.46C5.1928 10.2147 5.18155 9.96823 5.1841 9.7217C5.16805 8.73836 5.49293 7.77978 6.10353 7.00881C6.16488 6.92844 6.23023 6.85119 6.29933 6.77736C6.42176 6.64037 6.50408 6.47228 6.53724 6.29157C6.57041 6.11085 6.55314 5.9245 6.48733 5.75295C6.41986 5.57248 6.36792 5.38658 6.33206 5.19728C6.25059 4.659 6.27731 4.10987 6.41066 3.58204C7.27979 3.82752 8.09777 4.22708 8.82566 4.76172C8.94603 4.8419 9.08223 4.89525 9.22503 4.91817C9.36783 4.94108 9.51388 4.93303 9.6533 4.89454C11.6744 4.34604 13.8052 4.34639 15.8261 4.89554C15.9663 4.93398 16.1131 4.94158 16.2565 4.91781C16.3999 4.89404 16.5364 4.83947 16.6567 4.75785C17.3812 4.22099 18.1957 3.81785 19.062 3.56742C19.1947 4.08258 19.2244 4.61888 19.1494 5.14554C19.1132 5.35308 19.0566 5.55654 18.9804 5.75297C18.9146 5.92452 18.8974 6.11087 18.9305 6.29159C18.9637 6.4723 19.046 6.64038 19.1684 6.77738C19.2456 6.86429 19.3227 6.95804 19.3921 7.04593C19.9984 7.80385 20.3177 8.75141 20.294 9.72169C20.2958 9.9813 20.2832 10.2408 20.2564 10.499C20.0361 13.5547 18.5308 14.9629 15.0606 15.3584C14.868 15.3803 14.686 15.4577 14.5366 15.5812C14.3873 15.7047 14.277 15.8689 14.2192 16.0538C14.1614 16.2388 14.1586 16.4366 14.2112 16.6231C14.2637 16.8096 14.3693 16.9769 14.5151 17.1045C14.7638 17.3495 14.9272 17.6679 14.9815 18.0127C15.049 18.2804 15.0801 18.556 15.0737 18.832V21.166C15.064 21.8135 15.064 22.2988 15.064 22.5215C15.064 22.7867 15.1693 23.0411 15.3569 23.2286C15.5444 23.4161 15.7987 23.5215 16.064 23.5215C16.3292 23.5215 16.5835 23.4161 16.7711 23.2286C16.9586 23.0411 17.064 22.7867 17.064 22.5215C17.064 22.3047 17.064 21.8291 17.0737 21.1817V18.832C17.0818 18.3899 17.0297 17.9487 16.9189 17.5205C16.8873 17.38 16.8485 17.2411 16.8027 17.1045C18.324 16.8518 19.7062 16.0675 20.7033 14.8911C21.7005 13.7148 22.2479 12.2228 22.248 10.6807C22.281 10.3621 22.2963 10.042 22.294 9.72169C22.3162 8.34046 21.8712 6.99222 21.0313 5.89551L21.0313 5.89549Z" fill="#4D63B5"/>
-                                    </svg>
-                                </span>
+                                <span><img src={logo} alt="portfolio" /></span>
                                 <span className="body-text-p2">{portfolio}</span>
                             </a>
                         </p>
