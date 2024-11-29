@@ -7,6 +7,9 @@
 // import imgStarMaster from './images/STARMaster.svg'
 // import viteLogo from '/vite.svg'
 // import Image from './components/image'
+
+import DevCard from './components/devcard';
+import DesignerCard from './components/designercard';
 import './App.css'
 
 function App() {
@@ -67,7 +70,6 @@ function App() {
           
           <div className='w-full flex justify-center'>
             {/* <img src="{`${URI}${imgPhone}`}"  className="w-1/3 flex-none" alt="React logo" /> */}
-            
             <div className='self-end'>
               <h4>Learn about PrepUp</h4>
               <img src="https://placehold.co/600x400" alt="" />
@@ -112,7 +114,7 @@ function App() {
           <h2>Meet our Team</h2>
           <p className='py-10'>Highly professional and capable  of running your business across all digital channels</p>
 
-          <div className='flex justify-center'>
+          {/* <div className='flex justify-center'>
             <img src='./images/bts/PUBTS-01.jpg' className="w-80" alt="React logo" />
             <img src='./images/bts/PUBTS-02.jpg' className="w-80" alt="React logo" />
             <img src='./images/bts/PUBTS-03.jpg' className="w-80" alt="React logo" />
@@ -122,108 +124,18 @@ function App() {
             <img src='./images/bts/PUBTS-07.jpg' className="w-80" alt="React logo" />
             <img src='./images/bts/PUBTS-09.jpg' className="w-80" alt="React logo" />
             <img src='./images/bts/PUBTS-11.jpg' className="w-80" alt="React logo" />
-          </div>
+          </div> */}
 
         </section>
 
         <section>
           <h2 className='py-10'>Development Team</h2>
 
-          <div className="w-70 grid grid-cols-2 grid-flow-col gap-5">
-            <div className="member-card">
-              <img src='https://placehold.co/264' className="card-profile" alt="Full Name" />
-              <div className="card-detail card-light-yellow">
-                <h4 className="header-title-h4">Shunsaku Sugita</h4>
-                <p className="body-text-p1">Lead Full-Stack Developer</p>
-                <p className="body-text-p2">5 years experience as a backend engineer and 2 years experience as a salesperson in the tech industry. I contribute to the project with product development and team management.</p>
-                <p className="body-link">
-                  <a className="social-link" href="/" target="_blank">
-                    <span><img src='https://placehold.co/24' className="" alt="LinkedIn" /></span>&nbsp;
-                    <span className="body-text-p2">Link</span>
-                  </a>
-                  <a className="social-link" href="/" target="_blank">
-                    <span><img src='https://placehold.co/24' className="" alt="GITHUB" /></span>&nbsp;
-                    <span className="body-text-p2">Link</span>
-                  </a>
-                </p>
-              </div>
-            </div>
-            
-          </div>
-          
+          <DevCard />
 
           <h2 className='py-10'>Design Team</h2>
 
-          <div className="w-70 flex">
-            <div>
-              <img src='https://placehold.co/264' className="" alt="Full Name" />
-              <div>
-                <h4>Shunsaku Sugita</h4>
-                <p>Lead Full-Stack Developer</p>
-                <p>5 years experience as a backend engineer and 2 years experience as a salesperson in the tech industry. I contribute to the project with product development and team management.</p>
-                <p className="flex">
-                  <a href="/" target="_blank">
-                    <img src='https://placehold.co/24' className="" alt="LinkedIn" />
-                  </a>
-
-                  <a href="/" target="_blank">
-                    <img src='https://placehold.co/24' className="" alt="GITHUB" />
-                  </a>
-                </p>
-              </div>
-            </div>
-            <div>
-              <img src='https://placehold.co/264' className="" alt="Full Name" />
-              <div>
-                <h4>Shunsaku Sugita</h4>
-                <p>Lead Full-Stack Developer</p>
-                <p>5 years experience as a backend engineer and 2 years experience as a salesperson in the tech industry. I contribute to the project with product development and team management.</p>
-                <p className="flex">
-                  <a href="/" target="_blank">
-                    <img src='https://placehold.co/24' className="" alt="LinkedIn" />
-                  </a>
-
-                  <a href="/" target="_blank">
-                    <img src='https://placehold.co/24' className="" alt="GITHUB" />
-                  </a>
-                </p>
-              </div>
-            </div>
-            <div>
-              <img src='https://placehold.co/264' className="" alt="Full Name" />
-              <div>
-                <h4>Shunsaku Sugita</h4>
-                <p>Lead Full-Stack Developer</p>
-                <p>5 years experience as a backend engineer and 2 years experience as a salesperson in the tech industry. I contribute to the project with product development and team management.</p>
-                <p className="flex">
-                  <a href="/" target="_blank">
-                    <img src='https://placehold.co/24' className="" alt="LinkedIn" />
-                  </a>
-
-                  <a href="/" target="_blank">
-                    <img src='https://placehold.co/24' className="" alt="GITHUB" />
-                  </a>
-                </p>
-              </div>
-            </div>
-            <div>
-              <img src='https://placehold.co/264' className="" alt="Full Name" />
-              <div>
-                <h4>Shunsaku Sugita</h4>
-                <p>Lead Full-Stack Developer</p>
-                <p>5 years experience as a backend engineer and 2 years experience as a salesperson in the tech industry. I contribute to the project with product development and team management.</p>
-                <p className="flex">
-                  <a href="/" target="_blank">
-                    <img src='https://placehold.co/24' className="" alt="LinkedIn" />
-                  </a>
-
-                  <a href="/" target="_blank">
-                    <img src='https://placehold.co/24' className="" alt="GITHUB" />
-                  </a>
-                </p>
-              </div>
-            </div>
-          </div>
+          <DesignerCard />
           
         </section>
         

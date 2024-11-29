@@ -67,10 +67,10 @@ button:focus-visible {
 }
 
 .card-detail {
-  background-color: #1a1a1a;
+  /* background-color: #1a1a1a; */
   text-align: left;
   border-radius: 34px;
-
+  height: 306px;
   display: flex;
   padding: 1rem;
   padding-left: 14rem;
@@ -95,7 +95,8 @@ button:focus-visible {
 
 .social-link {
   display: flex;
-  gap: 0.124rem;
+  gap: 0.5rem;
+  align-items: self-end;
 }
 
 .body-link {
@@ -110,7 +111,7 @@ h4 {
     color: var(--PrepUp-Color-Palette-Default-App-Colors-Still-Black, #1b1b1b);
     /* Heading 1 (Bold) */
     font-family: "Maven Pro";
-    font-size: 32px;
+    font-size: 28px;
     font-style: normal;
     font-weight: 700;
     line-height: 150%; /* 48px */
@@ -123,7 +124,7 @@ p {
     color: var(--PrepUp-Color-Palette-Default-App-Colors-Still-Black, #1b1b1b);
     /* Heading 2 (Medium) */
     font-family: "Maven Pro";
-    font-size: 24px;
+    font-size: 21px;
     font-style: normal;
     font-weight: 500;
     line-height: normal;
@@ -154,6 +155,18 @@ p {
 
 .card-light-yellow {
   background: var(--PrepUp-Color-Palette-Yappy-Yellow-Default, #f7c42b);
+}
+
+.card-dark-yellow {
+  background: var(--PrepUp-Color-Palette-Default-App-Colors-Warning, #ffaf3d);
+}
+
+.card-pink {
+  background: var(--PrepUp-Color-Palette-Fearless-Red-Disabled, #ffb0b0);
+}
+
+.card-nude {
+  background: var(--PrepUp-Color-Palette-Nifty-Nude-Default, #ffead9);
 }
 
 @media (prefers-color-scheme: light) {
