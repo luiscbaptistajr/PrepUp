@@ -3,9 +3,12 @@
 @import "tailwindcss/utilities";
 
 :root {
-  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  /* font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif; */
   line-height: 1.5;
   font-weight: 400;
+
+  --font-family-mulish: "Mulish", sans-serif;
+  --font-family-maven: "Maven Pro", sans-serif;
 
   color-scheme: light dark;
   color: rgba(255, 255, 255, 0.87);
@@ -17,8 +20,31 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
-.logo {
-  margin: 0;
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--PrepUp-Color-Palette-Nifty-Nude-Disabled, #fff8f3);
+  color: var(--PrepUp-Color-Palette-Breezy-Blue-Pressed, #4d63b5);
+}
+
+h2 {
+  font-family: var(--font-family-maven);
+  font-size: 54px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+
+footer {
+  align-items: center;
+
+  .logo {
+    margin: 0;
+    padding: 0;
+    width: 50%;
+  }
 }
 
 a {
@@ -62,6 +88,13 @@ button:focus-visible {
   outline: 4px auto -webkit-focus-ring-color;
 }
 
+.nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+}
+
 .intro {
   display: flex;
   padding: 0px 10px;
@@ -70,8 +103,43 @@ button:focus-visible {
   align-items: center;
   gap: 24px;
   margin-bottom: 24px;
-  width: 40%;
+  /* width: 40%; */
   margin: 0 auto 24px;
+}
+
+.downloadBtn {
+  display: flex;
+  height: 54px;
+  padding: 0px 20px;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  border-radius: 12px;
+  background: var(--PrepUp-Color-Palette-Breezy-Blue-Pressed, #4d63b5);
+
+  a,
+  a:hover {
+    color: #fff;
+  }
+
+  &:hover {
+    background: var(--PrepUp-Color-Palette-Breezy-Blue-Pressed, #2e4182);
+  }
+}
+
+.team-bg {
+  background: url(./images/member-bg.png);
+  background-repeat: no-repeat;
+  max-width: 100%;
+  background-size: contain;
+
+  &.dev {
+    background-position: 20%;
+  }
+
+  &.designer {
+    background-position: 60%;
+  }
 }
 
 .member-card {
@@ -123,9 +191,22 @@ button:focus-visible {
 
 /* TYPOGRAPHY */
 
+h3 {
+  &.header-title-h3 {
+    /* color: var(--PrepUp-Color-Palette-Default-App-Colors-Still-Black, #1b1b1b); */
+    /* Heading 1 (Bold) */
+    font-family: "Maven Pro";
+    font-size: 34px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 150%; /* 48px */
+    letter-spacing: -0.64px;
+  }
+}
+
 h4 {
   &.header-title-h4 {
-    color: var(--PrepUp-Color-Palette-Default-App-Colors-Still-Black, #1b1b1b);
+    /* color: var(--PrepUp-Color-Palette-Default-App-Colors-Still-Black, #1b1b1b); */
     /* Heading 1 (Bold) */
     font-family: "Maven Pro";
     font-size: 28px;
@@ -137,10 +218,18 @@ h4 {
 }
 
 p {
+  &.body-text-sub {
+    font-family: var(--font-family-maven);
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 150%; /* 48px */
+  }
+
   &.body-text-p1 {
-    color: var(--PrepUp-Color-Palette-Default-App-Colors-Still-Black, #1b1b1b);
+    /* color: var(--PrepUp-Color-Palette-Default-App-Colors-Still-Black, #1b1b1b); */
     /* Heading 2 (Medium) */
-    font-family: "Maven Pro";
+    font-family: var(--font-family-maven);
     font-size: 21px;
     font-style: normal;
     font-weight: 500;
@@ -148,7 +237,7 @@ p {
   }
 
   &.body-text-p2 {
-    color: var(--PrepUp-Color-Palette-Default-App-Colors-Still-Black, #1b1b1b);
+    /* color: var(--PrepUp-Color-Palette-Default-App-Colors-Still-Black, #1b1b1b); */
     /* Body Text (Regular) */
     font-family: Muli;
     font-size: 16px;
@@ -157,14 +246,23 @@ p {
     line-height: normal;
   }
 
-  &.body-link {
-    color: var(--PrepUp-Color-Palette-Default-App-Colors-Still-Black, #1b1b1b);
-    /* Body Text (Regular) */
-    font-family: Muli;
-    font-size: 16px;
-    font-style: normal;
-    font-weight: 200;
-    line-height: normal;
+  &.body-text-copy {
+    text-align: left;
+  }
+}
+
+.body-link {
+  /* color: var(--PrepUp-Color-Palette-Default-App-Colors-Still-Black, #1b1b1b); */
+  /* Body Text (Regular) */
+  font-family: var(--font-family-maven);
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 200;
+  line-height: normal;
+
+  &.nav {
+    font-size: 24px;
+    font-weight: bold;
   }
 }
 
@@ -184,6 +282,20 @@ p {
 
 .card-nude {
   background: var(--PrepUp-Color-Palette-Nifty-Nude-Default, #ffead9);
+}
+
+.fade-in-section {
+  opacity: 0;
+  transform: translateY(20vh);
+  visibility: hidden;
+  transition: opacity 1200ms ease-out, transform 600ms ease-out,
+    visibility 1200ms ease-out;
+  will-change: opacity, transform, visibility;
+}
+.fade-in-section.is-visible {
+  opacity: 1;
+  transform: none;
+  visibility: visible;
 }
 
 @media (prefers-color-scheme: light) {
