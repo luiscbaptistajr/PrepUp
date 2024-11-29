@@ -2,7 +2,7 @@ const Devcard = () => {
     
     const devItems = [
         {
-            cardPhoto: 'https://placehold.co/264',
+            cardPhoto: '/images/profile/shun.png',
             cardName: 'Shunsaku Sugita',
             cardJob: 'Lead Full-Stack Developer',
             cardRoleDetails: '5 years experience as a backend engineer and 2 years experience as a salesperson in the tech industry.',
@@ -11,7 +11,7 @@ const Devcard = () => {
             github:'shunsaku-sugita',
         },
         {
-            cardPhoto: 'https://placehold.co/264',
+            cardPhoto: '/images/profile/khushal.png',
             cardName: 'Khushal Khunt',
             cardJob: 'Full-Stack Developer',
             cardRoleDetails: 'I have 3 years of software development experience in mobile',
@@ -20,16 +20,16 @@ const Devcard = () => {
             github:'FTW-Khushal',
         },
         {
-            cardPhoto: 'https://placehold.co/264',
+            cardPhoto: '/images/profile/blanca.png',
             cardName: 'Blanca Liliana Flores',
             cardJob: 'Front-End Developer',
-            cardRoleDetails: 'I’m looking to not only improve my coding skills but also my understanding of UI/UX  to achieve a more understandable experience.',
+            cardRoleDetails: 'I’m looking to not only improve my coding skills but also improve my understanding on UI/UX.',
             cardColor: 'card-dark-yellow',
             linkedIn: "blanca-sf",
             github:'Blanca-sf',
         },
         {
-            cardPhoto: 'https://placehold.co/264',
+            cardPhoto: '/images/profile/yohei.png',
             cardName: 'Yohei Tarutani',
             cardJob: 'Front-End Developer',
             cardRoleDetails: 'I am pursuing my next career as a software developer(most probably a front-end developer)',
@@ -43,13 +43,13 @@ const Devcard = () => {
         
         <div className="w-70 grid grid-rows-2 grid-flow-col gap-24">
         {
-            devItems.map(({ cardPhoto, cardName, cardJob, cardColor, linkedIn, github }, key) => (
+            devItems.map(({ cardPhoto, cardName, cardRoleDetails, cardJob, cardColor, linkedIn, github }, key) => (
                 <div className="member-card" key={key}>
                     <img src={cardPhoto} className="card-profile" alt={cardName} />
                     <div className={'card-detail ' + cardColor}>
                         <h4 className="header-title-h4">{cardName}</h4>
                         <p className="body-text-p1">{cardJob}</p>
-                        {/* <p className="body-text-p2">{cardRoleDetails}</p> */}
+                        <p className="body-text-p2">{cardRoleDetails}</p>
                         <p className="body-link">
                             <a className="social-link" href={"https://www.linkedin.com/in/" + linkedIn} target="_blank">
                                 <span>

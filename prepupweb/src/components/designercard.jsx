@@ -4,7 +4,7 @@ const Designercard = () => {
     
     const desItems = [
         {
-            cardPhoto: 'https://placehold.co/264',
+            cardPhoto: '/images/profile/luis.png',
             cardName: 'Luis Baptista',
             cardJob: 'PM & UI/UX Designer',
             cardRoleDetails: 'I have over 10 years experience as Full Stack Developer. I specialize in delivering both technical and design solutions.',
@@ -14,27 +14,27 @@ const Designercard = () => {
             logo: '/images/logo/luis.svg'
         },
         {
-            cardPhoto: 'https://placehold.co/264',
+            cardPhoto: '/images/profile/darsh.png',
             cardName: 'Darshjot Sohi',
             cardJob: 'UI/UX Designer',
-            cardRoleDetails: 'I have a background in graphic designing where I freelanced making illustrations.',
+            cardRoleDetails: 'I have a background in graphic designing where I freelanced making illustrations. Now I’m working as a UI/UX designer for both web and mobile. I am still a beginner but I am willing to learn and improve.',
             cardColor: 'card-pink',
             linkedIn: "darshjotkaursohi",
             portfolio:'https://darshjotsohi.com',
             logo: './images/logo/darsh.svg'
         },
         {
-            cardPhoto: 'https://placehold.co/264',
+            cardPhoto: '/images/profile/kyril.png',
             cardName: 'Kyril Evangelista',
             cardJob: 'Lead UI/UX Designer',
-            cardRoleDetails: '3 years of experience as a Social Media Graphic Designer.',
+            cardRoleDetails: '3 years of experience as a Social Media Graphic Designer. My responsibilities are to co-produce and co-lead the PrepUp design team to create the branding/UI/UX of a market-ready app.',
             cardColor: 'card-dark-yellow',
             linkedIn: "kyrilevangelista",
             portfolio:'https://kyrillouis.online',
             logo: "./images/logo/kyril.svg"
         },
         {
-            cardPhoto: 'https://placehold.co/264',
+            cardPhoto: '/images/profile/dani.png',
             cardName: 'Danielle Carvalho',
             cardJob: 'UI/UX Designer & Illustrator',
             cardRoleDetails: '7 years experience in customer service, 2 years experience in team leadership and training, 1 year experience as a social media content creator and graphic designer.',
@@ -49,13 +49,13 @@ const Designercard = () => {
         
         <div className="w-70 grid grid-rows-2 grid-flow-col gap-24">
         {
-            desItems.map(({ cardPhoto, cardName, cardJob, cardColor, linkedIn, portfolio, logo }, key) => (
+            desItems.map(({ cardPhoto, cardName, cardJob, cardRoleDetails, cardColor, linkedIn, portfolio, logo }, key) => (
                 <div className="member-card" key={key}>
                     <img src={cardPhoto} className="card-profile" alt={cardName} />
                     <div className={'card-detail ' + cardColor}>
                         <h4 className="header-title-h4">{cardName}</h4>
                         <p className="body-text-p1">{cardJob}</p>
-                        {/* <p className="body-text-p2">{cardRoleDetails}</p> */}
+                        <p className="body-text-p2">{cardRoleDetails}</p>
                         <p className="body-link">
                             <a className="social-link" href={"https://www.linkedin.com/in/" + linkedIn} target="_blank">
                                 <span>

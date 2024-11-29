@@ -42,7 +42,7 @@ function App() {
       {/* Header */}
       <header className='width-full flex flex-nowrap justify-between'>
         <div className='w-1/3 justify-start'>
-          <a href="https://vite.dev" target="_blank" className='w-1/3'>
+          <a href="/" target="_blank">
             <img src="./images/PrepUpLogo.svg" className="logo flex-auto" alt="PrepUp logo" />
           </a>
         </div>
@@ -63,7 +63,7 @@ function App() {
 
         {/* HERO SECTION */}
         <section className='hero-container py-14'>
-          <div className='py-2.5'>
+          <div className='py-2.5 intro'>
             <h2>Practice interviews anywhere, on the go!</h2>
             <p>Interviews may be daunting, but you&#39;ll never have to practice them alone. PrepUp is your inteview companion on-the-go!</p>
           </div>
@@ -114,7 +114,7 @@ function App() {
           <h2>Meet our Team</h2>
           <p className='py-10'>Highly professional and capable  of running your business across all digital channels</p>
 
-          {/* <div className='flex justify-center'>
+          <div className='flex justify-center'>
             <img src='./images/bts/PUBTS-01.jpg' className="w-80" alt="React logo" />
             <img src='./images/bts/PUBTS-02.jpg' className="w-80" alt="React logo" />
             <img src='./images/bts/PUBTS-03.jpg' className="w-80" alt="React logo" />
@@ -124,7 +124,7 @@ function App() {
             <img src='./images/bts/PUBTS-07.jpg' className="w-80" alt="React logo" />
             <img src='./images/bts/PUBTS-09.jpg' className="w-80" alt="React logo" />
             <img src='./images/bts/PUBTS-11.jpg' className="w-80" alt="React logo" />
-          </div> */}
+          </div>
 
         </section>
 
@@ -145,7 +145,7 @@ function App() {
       <footer className='pt-10 pb-5'>
         <div className='w-full pt-10 pb-15'>
           <a href="/" target="_blank">
-            <img src='https://placehold.co/171x50' className="" alt="Full Name" />
+            <img src="./images/PrepUpLogo.svg" className="logo flex-auto" alt="PrepUp logo" />
           </a>
         </div>
         
