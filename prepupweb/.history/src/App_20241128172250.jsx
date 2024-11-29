@@ -40,7 +40,8 @@ function App() {
       <header className='width-full flex flex-nowrap justify-between'>
         <div className='w-1/3 justify-start'>
           <a href="https://vite.dev" target="_blank" className='w-1/3'>
-            <img src="./images/PrepUpLogo.svg" className="logo flex-auto" alt="PrepUp logo" />
+            {/* <img src={`${URI}${imgLogo}`} className="logo flex-auto" alt="PrepUp logo" /> */}
+            <img src={`${URI}${imgLogo}`} className="logo flex-auto" alt="PrepUp logo" />
           </a>
         </div>
         
@@ -66,7 +67,7 @@ function App() {
           </div>
           
           <div className='w-full flex justify-center'>
-            {/* <img src="{`${URI}${imgPhone}`}"  className="w-1/3 flex-none" alt="React logo" /> */}
+            {/* <img src={`${URI}${imgPhone}`}  className="w-1/3 flex-none" alt="React logo" /> */}
             
             <div className='self-end'>
               <h4>Learn about PrepUp</h4>
@@ -85,11 +86,11 @@ function App() {
               <h3>Interview Simulator</h3>
               <p>Easily practice anywhere with AI-generated quick.</p>
             </div>
-            <img src="./images/InterviewSimulator.svg" className="w-1/3" alt="Man holding the phone" />
+            <img src={`${URI}${imgInterviewSim}`} className="w-1/3" alt="Man holding the phone" />
           </div>
 
           <div className='flex justify-between'>
-            <img src="./images/JobFinder.svg" className="w-60" alt="Magnifying glass to find job" />
+            <img src={`${URI}${imgJobFinder}`} className="w-60" alt="Magnifying glass to find job" />
             <div className='self-center w-1/2 text-left'>
               <h3>Job Finder</h3>
               <p>Quickly browse through lists of tailored job roles based on your past or current occupation.</p>
@@ -101,7 +102,7 @@ function App() {
               <h3>S.T.A.R Master</h3>
               <p>Want to test answering situational tasks? Take the Situation/Task/Action/Result (S.T.A.R.) Master!</p>
             </div>
-            <img src="./images/STARMaster.svg" className="w-1/3" alt="Star in a bubble" />
+            <img src={`${URI}${imgStarMaster}`} className="w-1/3" alt="Star in a bubble" />
           </div>
           
         </section>
